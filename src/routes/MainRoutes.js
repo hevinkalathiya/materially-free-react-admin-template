@@ -20,11 +20,15 @@ const MainRoutes = {
       path: '/',
       element: <DashboardDefault />
     },
+    { path: '/utils/util-typography', element: <UtilsTypography /> },
     {
       path: '/dashboard/default',
       element: <DashboardDefault />
     },
-    { path: '/utils/util-typography', element: <UtilsTypography /> },
+    {
+      path: '/dashboard/default',
+      element: <DashboardDefault />
+    },
     { path: '/sample-page', element: <SamplePage /> }
   ]
 };

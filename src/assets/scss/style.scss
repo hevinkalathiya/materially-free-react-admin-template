@@ -1,5 +1,8 @@
 @import 'themes-vars';
 @import 'plugins/plugins';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* breadcrumb */
 .link-breadcrumb {
