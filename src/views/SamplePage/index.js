@@ -6,6 +6,8 @@ import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import 'tailwindcss/tailwind.css';
 import { DropzoneArea } from 'material-ui-dropzone';
+import toast, { Toaster } from 'react-hot-toast';
+import axios from 'axios';
 
 const SimpleForm = () => {
   const [boxes, setBoxes] = useState([
@@ -126,29 +128,38 @@ const SimpleForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const formData = {
-      title: event.target.title.value,
-      tagline1: event.target.tagline1.value,
-      tagline2: event.target.tagline2.value,
-      duration: event.target.duration.value,
-      courseShort: courseLength,
-      moduleData: boxes,
-      quizData: questions,
-      courseThumbnail: courseThumbnail,
-      careerPathFile: careerPathFile,
-      techStackFile: techStackFile,
-      description: description,
-      describeCourse: describeCourse
-    };
+    try {
+      const formData = new FormData();
 
-    console.log(formData);
+      // Append each field from your object to the formData object
+      formData.append('title', event.target.title.value);
+      formData.append('tagline1', event.target.tagline1.value);
+      formData.append('tagline2', event.target.tagline2.value);
+      formData.append('duration', event.target.duration.value);
+      formData.append('isShort', courseLength);
+      formData.append('modules', JSON.stringify(boxes)); // Convert array to string if needed
+      formData.append('questions', JSON.stringify(questions)); // Convert array to string if needed
+      formData.append('thumbnail', courseThumbnail);
+      formData.append('careerPathFile', careerPathFile);
+      formData.append('technologies', techStackFile);
+      formData.append('description', description);
+      formData.append('roadMap', describeCourse);
 
-    // try {
-    //   const response = await axios.post(`${process.env.HOST}/course/`, formData);
-    //   console.log('API response:', response.data);
-    // } catch (error) {
-    //   console.error('API error:', error);
-    // }
+      console.log();
+
+      // Make the Axios POST request
+      const response = await axios.post('https://backend.internative.in/course/', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+
+      console.log('Response:', response.data);
+      // Handle the response data or perform other actions here
+    } catch (error) {
+      console.error('Error:', error);
+      // Handle errors here
+    }
   };
   // console.log(`${process.env.BASEURL}/course/`);
 
@@ -447,6 +458,7 @@ const SimpleForm = () => {
           </Button>
         </div>
       </div>
+      <Toaster />
     </form>
   );
 };
