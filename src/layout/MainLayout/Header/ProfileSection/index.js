@@ -5,10 +5,10 @@ import { useTheme } from '@mui/material/styles';
 import { Fade, Button, ClickAwayListener, Paper, Popper, List, ListItemText, ListItemIcon, ListItemButton } from '@mui/material';
 
 // assets
-import PersonTwoToneIcon from '@mui/icons-material/PersonTwoTone';
-import DraftsTwoToneIcon from '@mui/icons-material/DraftsTwoTone';
-import LockOpenTwoTone from '@mui/icons-material/LockOpenTwoTone';
-import SettingsTwoToneIcon from '@mui/icons-material/SettingsTwoTone';
+// import PersonTwoToneIcon from '@mui/icons-material/PersonTwoTone';
+// import DraftsTwoToneIcon from '@mui/icons-material/DraftsTwoTone';
+// import LockOpenTwoTone from '@mui/icons-material/LockOpenTwoTone';
+// import SettingsTwoToneIcon from '@mui/icons-material/SettingsTwoTone';
 import AccountCircleTwoToneIcon from '@mui/icons-material/AccountCircleTwoTone';
 import MeetingRoomTwoToneIcon from '@mui/icons-material/MeetingRoomTwoTone';
 
@@ -21,11 +21,11 @@ const ProfileSection = () => {
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
 
-  const handleListItemClick = (event, index) => {
-    setSelectedIndex(index);
-  };
-
-  const handleToggle = () => {
+  // const handleListItemClick = (event, index) => {
+    // };
+    
+    const handleToggle = () => {
+    setSelectedIndex();
     setOpen((prevOpen) => !prevOpen);
   };
 
@@ -95,7 +95,7 @@ const ProfileSection = () => {
                     borderRadius: '10px'
                   }}
                 >
-                  <ListItemButton selected={selectedIndex === 0} onClick={(event) => handleListItemClick(event, 0)}>
+                  {/* <ListItemButton selected={selectedIndex === 0} onClick={(event) => handleListItemClick(event, 0)}>
                     <ListItemIcon>
                       <SettingsTwoToneIcon />
                     </ListItemIcon>
@@ -118,7 +118,7 @@ const ProfileSection = () => {
                       <LockOpenTwoTone />
                     </ListItemIcon>
                     <ListItemText primary="Lock Screen" />
-                  </ListItemButton>
+                  </ListItemButton> */}
                   <ListItemButton selected={selectedIndex === 4}>
                     <ListItemIcon>
                       <MeetingRoomTwoToneIcon />

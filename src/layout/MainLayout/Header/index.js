@@ -6,14 +6,14 @@ import { useTheme } from '@mui/material/styles';
 import { Box, Grid, IconButton } from '@mui/material';
 
 // project import
-import SearchSection from './SearchSection';
+// import SearchSection from './SearchSection';
+// import NotificationSection from './NotificationSection';
 import ProfileSection from './ProfileSection';
-import NotificationSection from './NotificationSection';
 import { drawerWidth } from 'config.js';
 
 // assets
 import MenuTwoToneIcon from '@mui/icons-material/MenuTwoTone';
-import logo from 'assets/images/logo.svg';
+// import logo from 'assets/images/logo.svg';
 
 // ==============================|| HEADER ||============================== //
 
@@ -27,7 +27,7 @@ const Header = ({ drawerToggle }) => {
           <Box sx={{ display: { xs: 'none', md: 'block' } }}>
             <Grid item>
               <Box mt={0.5}>
-                <img src={logo} alt="Logo" />
+                <img src={`https://www.internative.in/assets/img/logo.jpg`} height={50} width={130} alt="Logo" />
               </Box>
             </Grid>
           </Box>
@@ -46,8 +46,8 @@ const Header = ({ drawerToggle }) => {
         </Grid>
       </Box>
       <Box sx={{ flexGrow: 1 }} />
-      <SearchSection theme="light" />
-      <NotificationSection />
+      {/* <SearchSection theme="light" /> */}
+      {/* <NotificationSection /> */}
       <ProfileSection />
     </>
   );

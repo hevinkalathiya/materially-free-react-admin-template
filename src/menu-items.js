@@ -24,22 +24,22 @@ const icons = {
 // eslint-disable-next-line
 export default {
   items: [
-    {
-      id: 'navigation',
-      title: 'Materially',
-      caption: 'Dashboard',
-      type: 'group',
-      icon: icons['NavigationOutlinedIcon'],
-      children: [
-        {
-          id: 'dashboard',
-          title: 'Dashboard',
-          type: 'item',
-          icon: icons['HomeOutlinedIcon'],
-          url: '/dashboard/default'
-        }
-      ]
-    },
+    // {
+    //   id: 'navigation',
+    //   title: 'Materially',
+    //   caption: 'Dashboard',
+    //   type: 'group',
+    //   icon: icons['NavigationOutlinedIcon'],
+    //   children: [
+    //     {
+    //       id: 'dashboard',
+    //       title: 'Dashboard',
+    //       type: 'item',
+    //       icon: icons['HomeOutlinedIcon'],
+    //       url: '/dashboard/default'
+    //     }
+    //   ]
+    // },
     {
       id: 'pages',
       title: 'Pages',
@@ -85,58 +85,58 @@ export default {
         }
       ]
     },
-    {
-      id: 'utils',
-      title: 'Utils',
-      type: 'group',
-      icon: icons['AccountTreeOutlinedIcon'],
-      children: [
-        {
-          id: 'util-icons',
-          title: 'Icons',
-          type: 'item',
-          url: 'https://mui.com/material-ui/material-icons/',
-          icon: icons['AppsOutlinedIcon'],
-          external: true,
-          target: true
-        },
-        {
-          id: 'util-typography',
-          title: 'Typography',
-          type: 'item',
-          url: '/utils/util-typography',
-          icon: icons['FormatColorTextOutlinedIcon']
-        }
-      ]
-    },
-    {
-      id: 'support',
-      title: 'Support',
-      type: 'group',
-      icon: icons['ContactSupportOutlinedIcon'],
-      children: [
-        {
-          id: 'disabled-menu',
-          title: 'Disabled Menu',
-          type: 'item',
-          url: '#',
-          icon: icons['BlockOutlinedIcon'],
-          disabled: true
-        },
-        {
-          id: 'documentation',
-          title: 'Documentation',
-          type: 'item',
-          url: 'https://codedthemes.gitbook.io/materially-react-material-documentation/',
-          icon: icons['HelpOutlineOutlinedIcon'],
-          chip: {
-            label: 'Help?',
-            color: 'primary'
-          },
-          external: true,
-          target: true
-        }
-      ]
-    }
+    // {
+    //   id: 'utils',
+    //   title: 'Utils',
+    //   type: 'group',
+    //   icon: icons['AccountTreeOutlinedIcon'],
+    //   children: [
+    //     {
+    //       id: 'util-icons',
+    //       title: 'Icons',
+    //       type: 'item',
+    //       url: 'https://mui.com/material-ui/material-icons/',
+    //       icon: icons['AppsOutlinedIcon'],
+    //       external: true,
+    //       target: true
+    //     },
+    //     {
+    //       id: 'util-typography',
+    //       title: 'Typography',
+    //       type: 'item',
+    //       url: '/utils/util-typography',
+    //       icon: icons['FormatColorTextOutlinedIcon']
+    //     }
+    //   ]
+    // },
+    // {
+    //   id: 'support',
+    //   title: 'Support',
+    //   type: 'group',
+    //   icon: icons['ContactSupportOutlinedIcon'],
+    //   children: [
+    //     {
+    //       id: 'disabled-menu',
+    //       title: 'Disabled Menu',
+    //       type: 'item',
+    //       url: '#',
+    //       icon: icons['BlockOutlinedIcon'],
+    //       disabled: true
+    //     },
+    //     {
+    //       id: 'documentation',
+    //       title: 'Documentation',
+    //       type: 'item',
+    //       url: 'https://codedthemes.gitbook.io/materially-react-material-documentation/',
+    //       icon: icons['HelpOutlineOutlinedIcon'],
+    //       chip: {
+    //         label: 'Help?',
+    //         color: 'primary'
+    //       },
+    //       external: true,
+    //       target: true
+    //     }
+    //   ]
+    // }
   ]
 };
