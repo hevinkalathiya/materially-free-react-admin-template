@@ -48,10 +48,17 @@ export default {
       icon: icons['NavigationOutlinedIcon'],
       children: [
         {
-          id: 'sample-page',
-          title: 'Sample Page',
+          id: 'course-form',
+          title: 'Course Form',
           type: 'item',
-          url: '/sample-page',
+          url: '/course-form',
+          icon: icons['ChromeReaderModeOutlinedIcon']
+        },
+        {
+          id: 'course-table',
+          title: 'Course Table',
+          type: 'item',
+          url: '/course-table',
           icon: icons['ChromeReaderModeOutlinedIcon']
         },
         {

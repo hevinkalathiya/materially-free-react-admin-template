@@ -8,7 +8,8 @@ const DashboardDefault = Loadable(lazy(() => import('../views/Dashboard')));
 
 const UtilsTypography = Loadable(lazy(() => import('../views/Utils/Typography')));
 
-const SamplePage = Loadable(lazy(() => import('../views/SamplePage')));
+const CourseForm = Loadable(lazy(() => import('../views/CourseForm')));
+const CourseTable = Loadable(lazy(() => import('../views/CourseTable/CourseTable.jsx')));
 
 // ==============================|| MAIN ROUTES ||============================== //
 
@@ -29,7 +30,8 @@ const MainRoutes = {
       path: '/dashboard/default',
       element: <DashboardDefault />
     },
-    { path: '/sample-page', element: <SamplePage /> }
+    { path: '/course-form', element: <CourseForm /> },
+    { path: '/course-table', element: <CourseTable /> }
   ]
 };
 

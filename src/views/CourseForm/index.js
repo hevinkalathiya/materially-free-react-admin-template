@@ -6,7 +6,7 @@ import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import 'tailwindcss/tailwind.css';
 import { DropzoneArea } from 'material-ui-dropzone';
-import toast, { Toaster } from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
 import axios from 'axios';
 
 const SimpleForm = () => {
