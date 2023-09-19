@@ -136,12 +136,18 @@ const SimpleForm = () => {
       formData.append('tagline1', event.target.tagline1.value);
       formData.append('tagline2', event.target.tagline2.value);
       formData.append('duration', event.target.duration.value);
-      formData.append('isShort', courseLength);
-      formData.append('modules', JSON.stringify(boxes)); // Convert array to string if needed
-      formData.append('questions', JSON.stringify(questions)); // Convert array to string if needed
-      formData.append('thumbnail', courseThumbnail);
-      formData.append('careerPathFile', careerPathFile);
-      formData.append('technologies', techStackFile);
+      formData.append('isShort', courseLength === "short");
+      formData.append('modules', JSON.stringify(boxes)); 
+      formData.append('questions', JSON.stringify(questions)); 
+      courseThumbnail.map((file) => {
+        formData.append('thumbnail', file);
+      });
+      careerPathFile.map((file) => {
+        formData.append('careerPathImage', file);
+      });
+      techStackFile.map((file) => {
+        formData.append('technologies', file);
+      });
       formData.append('description', description);
       formData.append('roadMap', describeCourse);
 
