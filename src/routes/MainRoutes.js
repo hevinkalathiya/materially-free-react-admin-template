@@ -8,8 +8,9 @@ import Loadable from 'component/Loadable';
 
 // const UtilsTypography = Loadable(lazy(() => import('../views/Utils/Typography')));
 
-const CourseForm = Loadable(lazy(() => import('../views/CourseForm')));
+const CourseForm = Loadable(lazy(() => import('../views/CourseForm/CourseForm.js')));
 const CourseTable = Loadable(lazy(() => import('../views/CourseTable/CourseTable.jsx')));
+const UpdateCourse = Loadable(lazy(() => import('../views/UpdateCourse/UpdateCourse.jsx')));
 
 // ==============================|| MAIN ROUTES ||============================== //
 
@@ -17,21 +18,9 @@ const MainRoutes = {
   path: '/',
   element: <MainLayout />,
   children: [
-    // {
-    //   path: '/',
-    //   element: <DashboardDefault />
-    // },
-    // { path: '/utils/util-typography', element: <UtilsTypography /> },
-    // {
-    //   path: '/dashboard/default',
-    //   element: <DashboardDefault />
-    // },
-    // {
-    //   path: '/dashboard/default',
-    //   element: <DashboardDefault />
-    // },
     { path: '/course-form', element: <CourseForm /> },
-    { path: '/course-table', element: <CourseTable /> }
+    { path: '/course-table', element: <CourseTable /> },
+    { path: '/updated-course/:course-id', element: <UpdateCourse /> }
   ]
 };
 

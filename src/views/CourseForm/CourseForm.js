@@ -10,6 +10,7 @@ import { Toaster } from 'react-hot-toast';
 import axios from 'axios';
 
 const SimpleForm = () => {
+
   const [boxes, setBoxes] = useState([
     {
       mainTextFieldValue: '',

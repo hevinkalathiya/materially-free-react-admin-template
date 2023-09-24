@@ -62,6 +62,13 @@ export default {
           icon: icons['ChromeReaderModeOutlinedIcon']
         },
         {
+          id: 'update-course',
+          title: 'Update Course',
+          type: 'item',
+          url: '/updated-course',
+          icon: icons['ChromeReaderModeOutlinedIcon']
+        },
+        {
           id: 'auth',
           title: 'Authentication',
           type: 'collapse',

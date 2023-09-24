@@ -4,11 +4,13 @@ import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { Button } from '@mui/material';
 import axios from 'axios';
+import {  useNavigate } from 'react-router-dom';
 
 const CourseTable = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
-  
+
+  const navigate = useNavigate()
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -16,7 +18,7 @@ const CourseTable = () => {
         const modifiedData = response.data.data.map((item) => ({
           ...item,
           key: item._id,
-          numberofuser: "10",
+          numberofuser: '10'
         }));
         setData(modifiedData);
         setLoading(false);
@@ -73,6 +75,7 @@ const CourseTable = () => {
 
   const handleEdit = (key) => {
     console.log(`Edit button clicked for key: ${key}`);
+    navigate(`/course-form/${key}`)
   };
 
   const handleDelete = (key) => {
